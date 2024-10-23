@@ -1,0 +1,549 @@
+body {
+    padding: 40px;
+    margin: none;
+    background: #514e54 ;
+    background-image: url("wallpaper/PixabayMoleWallpaper.jpg");
+    text-align: center;
+    /* font-family: Arial, Helvetica, sans-serif; */
+    font-family: 'Comic Neue', cursive;
+}
+
+h1 {
+    font-size: 60px;
+    margin-bottom: 0px;
+    font-family: 'Lakki Reddy', cursive;
+    /* text-shadow: 1px 2px 1px #d28d33; */
+    filter: drop-shadow(2px 5px 2px red);
+    user-select: none;
+    -moz-user-select: none; /* prevent player from dragging images */
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+}
+
+.red {
+  color: red;
+  background-image: linear-gradient(to bottom right, red, darkred);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.green {
+  color: lime;
+  background-image: linear-gradient(to bottom right, lime, darkgreen);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+label {
+    color: black;
+}
+
+button {
+    box-shadow: 2px 5px 2px #4f3928;
+}
+
+button:active {
+    box-shadow: 1px 2px 1px #4f3928;
+}
+
+#container {
+    margin:auto;
+    justify-self: center;
+    background: #9c704e;
+    background-image: url("wallpaper/PixabayMoleWood1.jpg");
+    max-width: 80%;
+    min-width: 400px;
+    display: flex;
+    flex-direction: column;
+}
+
+#info {
+    display: flex;
+    flex-direction: row;
+    align-self: center;
+    font-size: 20px;
+}
+
+#info-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#instructions {
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-bottom: 30px;
+    padding: 10px;
+    background-color: #4f3928;
+    background: none;
+    background-image: url("wallpaper/PixabayMoleWood3.jpg");
+    border: solid black 3px;
+    border-radius: 15px;
+}
+
+#game-area {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: auto;
+    margin-top: 0px;
+    margin-bottom: 30px;
+}
+
+#options, #end-options, #tutorial, #highscores {
+    background-color: #4f3928;
+    background-image: url("wallpaper/PixabayMoleWood3.jpg");
+    border: solid black 4px;
+    border-radius: 15px;
+    padding: 10px;
+}
+
+#end-options {
+    margin-top: 30px;
+}
+
+#end-options img {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    user-select: none;
+    -moz-user-select: none; /* prevent player from dragging images */
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    width: 150px;
+    height: 150px;
+}
+
+#options p {
+    margin-top: 0px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+#highscores h3 {
+    text-decoration: underline;
+}
+
+#difficulty-option {
+    margin-top: 10px;
+}
+
+#tutorial {
+    margin: 30px;
+}
+
+#tutorial ul {
+    text-align: left;
+}
+
+#tutorial li {
+    line-height: 1.5;
+}
+
+#start-game, #help, #end-now, #retry, #continue, #show-highscores, #return-from-scores, #delete-scores {
+    margin: 10px;
+    height: 30px;
+    width: 90px;
+    border: 3px solid black;
+    border-radius: 10px;
+    font-weight: bold;
+}
+
+#start-game, #return-from-scores {
+    background-color: lime;
+    background-image: linear-gradient(to bottom right, lime, darkgreen);
+}
+
+#start-game:hover, #return-from-scores:hover {
+    color: lime;
+    background-color: white;
+    background-image: none;
+    cursor: pointer;
+}
+
+#start-game:active, #return-from-scores:active {
+    color: lime;
+    background-color: black;
+    background-image: none;
+    cursor: pointer;
+    border-color: lime;
+}
+
+#end-now, #retry, #delete-scores {
+    background-color: red;
+    background-image: linear-gradient(to bottom right, red, darkred);
+    width: 120px;
+}
+
+#end-now:hover, #retry:hover, #delete-scores:hover {
+    color: red;
+    background-color: white;
+    background-image: none;
+    cursor: pointer;
+}
+
+#end-now:active, #retry:active, #delete-scores:active {
+    color: red;
+    background-color: black;
+    background-image: none;
+    cursor: pointer;
+    border-color: red;
+}
+
+#end-now {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    width: 50px;
+    box-shadow: 1px 2px 1px black;
+}
+
+#continue {
+    background-color: lime;
+    background-image: linear-gradient(to bottom right, lime, darkgreen);
+    width: 120px;
+}
+
+#continue:hover {
+    color: lime;
+    background-color: white;
+    background-image: none;
+    cursor: pointer;
+}
+
+#continue:active {
+    color: lime;
+    background-color: black;
+    background-image: none;
+    cursor: pointer;
+    border-color: lime;
+}
+
+#start-game:disabled, #retry:disabled, #continue:disabled {
+    color: gray;
+    background-color: lightgray;
+    cursor: not-allowed;
+}
+
+#show-highscores {
+    background-color: orange;
+    background-image: linear-gradient(to bottom right, orange, #a03f00);
+    /*width: 120px;*/
+}
+
+#show-highscores:hover{
+    color: orange;
+    background-color: white;
+    background-image: none;
+    cursor: pointer;
+}
+
+#show-highscores:active {
+    color: orange;
+    background-color: black;
+    background-image: none;
+    cursor: pointer;
+    border-color: orange;
+}
+
+/* #game-board {
+    display: grid;
+    grid-template-columns: 100px 100px 100px;
+    grid-auto-rows: 100px;
+    width: 300px;
+    margin: auto;
+    background-color: black;
+} */
+
+#game-board {
+    display: flex;
+    margin: 0;
+}
+
+#board-header {
+    display: flex;
+    flex-direction: row;
+}
+
+.board-header-duo {
+    justify-content: space-between;
+}
+
+.board-header-mono {
+    justify-content: center;
+}
+
+#grid {
+    width: 300px;
+    height: 300px;
+    background-color: #a03f00;
+    background-image: url("wallpaper/PixabayMoleWood2.jpg");
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    border: 5px solid black;
+    border-radius: 10px;
+}
+
+/* Mole Square */
+#grid div {
+    width: 100px;
+    height: 100px;
+    background-image: url("hole2.png");
+    background-size: cover;
+    cursor: url("cursor/hammerIcon1.png"), pointer;
+}
+
+/* Mole within square */
+#grid div img {
+    width: 100px;
+    height: 100px;
+    user-select: none;
+    -moz-user-select: none; /* prevent player from dragging images */
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    cursor: url("cursor/hammerIcon2.png"), pointer;
+}
+
+#grid div img:active {
+    cursor: url("cursor/hammerIcon3.png"), pointer;
+}
+
+.big-grid {
+    width: 300px;
+    height: 300px;
+}
+
+.big-grid div {
+    width: 100px;
+    height: 100px;
+}
+
+.big-grid div img {
+    width: 100px;
+    height: 100px;
+}
+
+.popUpMole, .popDownMole {
+    animation-name: popUp;
+    animation-duration: 500ms;
+    animation-fill-mode: backwards;
+    animation-iteration-count: infinite;
+    position: relative;
+}
+
+.popDownMole {
+    animation-direction: reverse;
+}
+
+@keyframes popUp {
+    0% {height: 0%;
+        bottom: -100%;}
+    100% {height: 100%;
+        bottom: 0%;}
+}
+
+.square {
+    margin: 5px;
+    background-color: white;
+    background-image: url("blank.png");
+    background-position: center;
+    background-size: cover;
+}
+
+#help {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    background-color: grey;
+    background-image: linear-gradient(to bottom right, lightgray, grey);
+    padding: 0%;
+    width: 120px;
+    box-shadow: 1px 2px 1px black;
+}
+
+#help:hover {
+    color: grey;
+    background-color: white;
+    background-image: none;
+    cursor: pointer;
+}
+
+#help:active {
+    color: grey;
+    background-color: black;
+    background-image: none;
+    cursor: pointer;
+    border-color: grey;
+}
+
+#help, #end-now, #retry, #continue {
+    height: 30px;
+}
+
+#help, #end-now {
+    margin-top: 10px;
+    width: 60px;
+    border-radius: 5px;
+}
+
+#messages {
+    margin: 30px;
+    margin-top: 0px;
+    margin-left: 10%;
+    margin-right: 10%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #fdfd96;
+    background: none;
+    background-image: url("wallpaper/PixabayMoleWood3.jpg");
+    border: solid black 3px;
+    border-radius: 15px;
+}
+
+#message {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+#p1-score, #p2-score {
+    font-family: 'Lakki Reddy', cursive;
+    font-size: 30px;
+    font-weight: bold;
+    margin-top: 20px;
+    margin-bottom: 0px;
+}
+
+#mouse, #cat {
+    background-color: white;
+    margin: 30px;
+    margin-top: 10px;
+    padding: 10px;
+    height: 100px;
+    width: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border: 5px solid black;
+    border-radius: 5px;
+    box-shadow: 2px 5px 2px #d28d33;
+}
+
+#mouse {
+    background-color: #97ff57;
+}
+
+#cat {
+    background-color: #ff7878;
+}
+
+#mouse img, #cat img {
+    max-height: 150px;
+    max-width: 150px;
+    object-fit: contain;
+}
+
+@media screen and (min-width: 600px){
+    #info-container {
+        min-width: 250px;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    h1 {
+        font-size: 50px;
+    }
+    body {
+        padding: 30px;
+        padding-top: 80px;
+    }
+    #container {
+        max-width: 90%;
+    }
+    #instructions {
+        font-size: 18px;
+    }
+    /* #game-board {
+        grid-template-columns: 90px 90px 90px;
+        grid-auto-rows: 90px;
+        width: 270px;
+    } */
+    #messages {
+        flex-wrap: wrap;
+    }
+    #message {
+        font-size: 18px;
+        order: 1;
+        width: 100%;
+        margin-bottom: 10px;
+    }
+    /* #mouse, #cat{
+        height: 80px;
+        width: 80px;
+        order: 2;
+    }
+    #mouse img, #cat img {
+        max-height: 100px;
+        max-width: 100px;
+    } */
+  }
+
+  @media screen and (max-width: 600px) {
+    h1 {
+        font-size: 45px;
+    }
+    body {
+        padding: 20px;
+        padding-top: 80px;
+    }
+    #container {
+        max-width: 100%;
+    }
+    #instructions {
+        font-size: 16px;
+    }
+    /* #instructions {
+        display: none;
+    } */
+    /* #game-board {
+        grid-template-columns: 80px 80px 80px;
+        grid-auto-rows: 80px;
+        width: 240px;
+    } */
+    #message {
+        font-size: 16px;
+        padding: 10px;
+        padding-bottom: 0px;
+    }
+    .not-mobile-friendly {
+        pointer-events: none;
+        opacity: 50%;
+    }
+    /* #mouse, #cat{
+        height: 60px;
+        width: 60px;
+    }
+    #mouse img, #cat img {
+        max-height: 80px;
+        max-width: 80px;
+    }
+    .big-grid {
+        width: 300px;
+        height: 300px;
+    }
+    .big-grid div {
+        width: 60px;
+        height: 60px;
+    }
+    .big-grid div img {
+        width: 60px;
+        height: 60px;
+    } */
+  }
